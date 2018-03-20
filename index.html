@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <link rel="stylesheet" href="./stlye.css">
+  <title>Hangman Bible</title>
+</head>
+<body onselectstart="return false">
+  <div id="container">
+    <div class="title">HANGMAN Bible
+      <img src="https://thumbs.gfycat.com/BewitchedUncomfortableGalapagosdove-max-1mb.gif" alt="bible">
+    </div>
+    <!-- Menu start -->
+    <div id="menu">
+      <div id="opt">
+        <ul>
+          <li><a onClick="startGame();" id="play">PLAY</a></li>
+          <li><a onClick="showOptions();" id="options">OPTIONS</a></li>
+          <li><a onClick="showInfo();" id="auth">INFORMATIONS</a></li>
+          <li><a onClick="exit();" id="exit">EXIT</a></li>
+        </ul>
+      </div>
+      <svg id="stickman" onclick="jump()" width="80px" height="100px">
+<circle cx="40" cy="20" r="13" stroke="black" stroke-width="5" fill="white" />
+<line x1="40" y1="35" x2="40" y2="70" />
+<line x1="40" y1="50" x2="10" y2="20" />
+<line x1="40" y1="50" x2="70" y2="20" />
+<line x1="40" y1="70" x2="20" y2="100" />
+<line x1="40" y1="70" x2="60" y2="100" />
+</svg>
+    </div>
+    <!-- Menu end -->
+    <!-- Game start -->
+    <div id="game">
+      <div id="svg">
+        <svg id="t1" width="200px" height="230px">
+            <line class="tb1" x1="20" y1="200" x2="20" y2="20" />
+        </svg>
+        <svg id="t2" width="200px" height="230px">
+            <line class="tb1" x1="20" y1="20" x2="160" y2="20" />
+        </svg>
+        <svg id="t3" width="200px" height="230px">
+            <line class="tb1" x1="21" y1="160" x2="60" y2="200"  />
+        </svg>
+        <svg id="t4" width="200px" height="230px">
+            <line class="tb1" x1="20" y1="50" x2="50" y2="20"  />
+        </svg>
+        <svg id="t5" width="200px" height="230px">
+            <line class="tb1" x1="140" y1="20" x2="140" y2="50"  />
+        </svg>
+        <svg id="t6" width="200px" height="230px">
+            <circle class="tb1" cx="140" cy="50" r="15" stroke="black" stroke-width="5" fill="white" />
+        </svg>
+        <svg id="t7" width="200px" height="230px">
+            <line class="tb1" x1="140" y1="65" x2="140" y2="100"  />
+        </svg>
+        <svg id="t8" width="200px" height="230px">
+            <line class="tb1" x1="140" y1="70" x2="120" y2="100"  />
+        </svg>
+        <svg id="t9" width="200px" height="230px">
+            <line class="tb1" x1="140" y1="70" x2="160" y2="100"  />
+        </svg>
+        <svg id="t10" width="200px" height="230px">
+            <line class="tb1" x1="140" y1="100" x2="120" y2="130"  />
+        </svg>
+        <svg id="t11" width="200px" height="230px">
+            <line class="tb1" x1="140" y1="100" x2="160" y2="130"  />
+        </svg>
+      </div>
+      <div id="passhint">
+      <div id="pass"></div><div class="hint">?</div></div>
+      <div id="alphabet">
+        <span id="a">A</span><span id="b">B</span>
+        <span id="c">C</span><span id="d">D</span>
+        <span id="e">E</span><span id="f">F</span>
+        <span id="g">G</span><span id="h">H</span>
+        <span id="i">I</span><span id="j">J</span>
+        <span id="k">K</span><span id="l">L</span>
+        <span id="m">M</span><span id="n">N</span>
+        <span id="o">O</span><span id="p">P</span>
+        <span id="q">Q</span><span id="r">R</span>
+        <span id="s">S</span><span id="t">T</span>
+        <span id="u">U</span><span id="v">V</span>
+        <span id="w">W</span><span id="x">X</span>
+        <span id="y">Y</span><span id="z">Z</span>
+        <span id="1">1</span><span id="2">2</span>
+        <span id="3">3</span><span id="-">-</span>
+
+
+
+      </div>
+    </div>
+    <!-- Game end -->
+    <!-- Options start -->
+    <div id="opcje">
+      <div id="opt">
+        <ul>
+          <li><a class="lock" id="lang">LANGUAGE</a></li>
+          <li><a onClick="switchDifficulty()" id="difficulty"></a></li>
+          <li><a class="lock" id="login">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Options end -->
+    <!-- Informations start -->
+    <div id="autor">
+      <div class="txt">
+        Hangman Bible is about guessing words from the Bible it includes names, books, places and random words.<br\>
+        Try to pick correct letters and you will win. Otherwise you will lose.
+        <br>
+        <p>Created by<br><a target='_blank' href='http://caringhandmaidens.com/'><b>Don Tamayo</b></a></p>
+        <p>More Info about me<br><a target='_blank' href='https://resume-viewer2018.herokuapp.com/'><b>Click Me</b></a></p>
+      </div>
+    </div>
+    <!-- Informations end -->
+    <div onClick="showMenu();" id="back">MENU</div>
+  </div>
+
+  <script src="./apps.js">
+
+  </script>
+</body>
+
+</html>
