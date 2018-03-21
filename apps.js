@@ -26,7 +26,7 @@ word = [
 "PSALMS",
 "PROVERBS",
 "ECCLESIASTES",
-"SONG OF SOLOMON",
+"SONG-OF-SOLOMON",
 "ISAIAH",
 "JEREMIAH",
 "LAMENTATIONS",
@@ -74,7 +74,13 @@ word = [
 "JESUS",
 "JOSEPH",
 "ABRAHAM",
-"SARAH"
+"SARAH",
+"JOHN-THE-BAPTIST",
+"SAMSON",
+"DELILAH",
+"NOAH",
+"DAVID",
+"GOLIATH"
 
     ];
 
@@ -118,7 +124,9 @@ function showInfo() {
 function exit(){
     c=confirm("Are you sure?");
     if (c===true){
-        window.location.href = "http://www.threeg.ct8.pl/index_en.html";
+        window.location.href = "https://en.wikipedia.org/wiki/Hangman_(game)";
+    }else{
+      alert("Thank you for playing Hangman Bible")
     }
 }
 function hide() {
